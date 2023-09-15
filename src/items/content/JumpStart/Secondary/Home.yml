@@ -1,0 +1,46 @@
+﻿---
+ID: "b65f7a60-27f9-4d94-8d75-a4ccfe88681a"
+Parent: "6f57acd6-652c-4483-ae21-778c0021a3b4"
+Template: "b6dfd0fd-26d7-4135-8c94-300189d37e16"
+Path: /sitecore/content/JumpStart/Secondary/Home
+BranchID: "45cf9f42-b3ac-4412-aab9-f8441c7e448e"
+SharedFields:
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{1ACDA6ED-941D-45B2-9D75-B3E885ABBBC6}" />
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{F558BEC9-C602-4D7A-B9A1-D0411C946EA4}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20230915T150105Z
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: Secondary
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\martin.miles@perficient.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\martin.miles@perficient.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "82cb2068-8992-46c7-93f0-f2cdf4203fb2"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\martin.miles@perficient.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20230915T150112Z
+    - ID: "f51575bc-28bf-4c32-b9b6-c37a697d89ab"
+      Hint: Title
+      Value: Secondary

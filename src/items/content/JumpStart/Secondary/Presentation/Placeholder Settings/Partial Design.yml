@@ -1,0 +1,31 @@
+﻿---
+ID: "a4a271cb-d895-4c70-a9ab-6b05c3cba53e"
+Parent: "18b7a4c9-331b-402c-bd5c-cd5998a8a98f"
+Template: "52288e39-7830-4694-b62d-32a54c6ef7ba"
+Path: /sitecore/content/JumpStart/Secondary/Presentation/Placeholder Settings/Partial Design
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20230915T150106Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\martin.miles@perficient.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\martin.miles@perficient.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "abcba76b-9e64-49f0-b567-b437768d1a4a"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\martin.miles@perficient.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20230915T150106Z

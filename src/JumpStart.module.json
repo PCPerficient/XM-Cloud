@@ -1,0 +1,79 @@
+{
+    "namespace": "JumpStart",
+    "items": {
+      "includes": [
+        {
+          "name": "content-root",
+          "path": "/sitecore/content",
+          "scope": "singleItem",
+          "allowedPushOperations": "createAndUpdate"
+        },
+        {
+          "name": "layouts",
+          "path": "/sitecore/layout/Layouts/Project/JumpStart",
+          "allowedPushOperations": "CreateUpdateAndDelete"
+        },
+        {
+          "name": "components",
+          "path": "/sitecore/layout/Renderings/Feature/JumpStart",
+          "allowedPushOperations": "CreateUpdateAndDelete"
+        },
+        {
+          "name": "componentsProject",
+          "path": "/sitecore/layout/Renderings/Project/JumpStart",
+          "allowedPushOperations": "CreateUpdateAndDelete"
+        },
+        {
+          "name": "placeholders",
+          "path": "/sitecore/layout/Placeholder Settings/Project/JumpStart",
+          "allowedPushOperations": "CreateUpdateAndDelete"
+        },
+        {
+          "name": "templates",
+          "path": "/sitecore/templates/Project/JumpStart",
+          "allowedPushOperations": "CreateUpdateAndDelete"
+        },
+        {
+          "name": "templatesFeature",
+          "path": "/sitecore/templates/Feature/JumpStart",
+          "allowedPushOperations": "CreateUpdateAndDelete"
+        },
+        {
+          "name": "media",
+          "path": "/sitecore/Media Library/Project/JumpStart",
+          "allowedPushOperations": "CreateUpdateAndDelete"
+        },
+        {
+          "name": "branchesFeature",
+          "path": "/sitecore/templates/Branches/Feature/JumpStart",
+          "allowedPushOperations": "CreateUpdateAndDelete"
+        },
+        {
+          "name": "branchesProject",
+          "path": "/sitecore/templates/Branches/Project/JumpStart",
+          "allowedPushOperations": "CreateUpdateAndDelete"
+        },
+        {
+          "name": "modules",
+          "path": "/sitecore/system/Settings/Feature/JumpStart",
+          "allowedPushOperations": "CreateUpdateAndDelete"
+        },
+        {
+          "name": "apikeySugconEu",
+          "path": "/sitecore/system/Settings/Services/API Keys/JumpStart",
+          "allowedPushOperations": "CreateUpdateAndDelete"
+        },
+        {
+          "name": "content",
+          "path": "/sitecore/content/JumpStart",
+          "allowedPushOperations": "CreateOnly"
+        },
+        {
+            "name": "DefaultRenderingHost",
+            "path": "/sitecore/system/Settings/Services/Rendering Hosts/JumpStart",
+            "scope": "singleItem"
+        }
+      ]
+    }
+  }
+  

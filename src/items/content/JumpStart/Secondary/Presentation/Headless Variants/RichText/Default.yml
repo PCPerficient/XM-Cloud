@@ -1,0 +1,36 @@
+﻿---
+ID: "6005be96-5665-45eb-a687-9b91087aa508"
+Parent: "bc0f4096-70e1-47c3-ae7e-1fe041c6fa5b"
+Template: "4d50cdae-c2d9-4de8-b080-8f992bfb1b55"
+Path: /sitecore/content/JumpStart/Secondary/Presentation/Headless Variants/RichText/Default
+BranchID: "6d954d26-5ba2-4e17-9260-28fdc6b057d0"
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{DF1847D5-271E-47E0-8630-8E9BEAFE60B3}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20230915T150111Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\martin.miles@perficient.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\martin.miles@perficient.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "e242d29c-9e9e-4bf1-b3be-e7e6504f6e0c"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\martin.miles@perficient.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20230915T150111Z

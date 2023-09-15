@@ -1,0 +1,31 @@
+﻿---
+ID: "7882faa2-c5c8-46b9-b1d9-e44a29208378"
+Parent: "1791c0fc-b1dc-4a9b-ad2f-a09f8e7d028c"
+Template: "8fe7f8dc-cb5d-42c2-99f8-76608c243f10"
+Path: /sitecore/content/JumpStart/Secondary/Data/Promos
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20230915T150111Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\martin.miles@perficient.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\martin.miles@perficient.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "3502dead-547e-4eb3-8d21-f3ce768c0257"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\martin.miles@perficient.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20230915T150111Z
