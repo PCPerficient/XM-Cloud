@@ -1,0 +1,8 @@
+{
+    "endpoints": {
+      "xmCloud": {
+        "automationClientId" : "Generate_your_clientID_at_Deply_app_Credentials_section",
+        "automationClientSecret" : "Same_for_secret-Please_ensure_to_never_check_in_this_file"
+      }
+  }
+}
