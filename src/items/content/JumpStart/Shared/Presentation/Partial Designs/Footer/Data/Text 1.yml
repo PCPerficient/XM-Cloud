@@ -24,14 +24,15 @@ Languages:
         sitecore\martin.miles@perficient.com
     - ID: "729034fc-24f3-40b7-8fa4-fb49d7de20dd"
       Hint: Text
-      Value: <p>Footer</p>
+      Value: |
+        <p>Footer&nbsp;<span style="text-align: var(--bs-body-text-align);"><span style="font-weight: var(--bs-body-font-weight);">from Shared site. Id - </span>{03355DA4-0226-4A75-8563-71BFF9BD4C7B}<span style="font-weight: var(--bs-body-font-weight);">, path:&nbsp;</span></span></p>/sitecore/content/JumpStart/Shared/Presentation/Partial Designs/Footer
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "9c944242-e296-4408-9b50-40fbac68330e"
+      Value: "714eca7f-98b9-48f7-8a56-405095cf12d4"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\martin.miles@perficient.com
+        sitecore\sitecore.professional@gmail.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20230915T150845Z
+      Value: 20230916T170521Z

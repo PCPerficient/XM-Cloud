@@ -1,0 +1,4 @@
+This files must present in this folder in order to enable 
+https://<CM_HOST_NAME>/sitecore/admin/PowerShell.aspx
+
+For example: https://xmcloudcm.localhost/sitecore/admin/PowerShell.aspx

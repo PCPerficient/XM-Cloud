@@ -101,23 +101,23 @@ finally {
 
 Write-Host "Adding Windows hosts file entries..." -ForegroundColor Green
 
-Add-HostsEntry "xmcloudcm.localhost"
-Add-HostsEntry "www.jumpstart.localhost"
-Add-HostsEntry "default.jumpstart.localhost"
-Add-HostsEntry "secondary.jumpstart.localhost"
+Add-HostsEntry "xmcloudcm.localhost"           # parametrize
+Add-HostsEntry "www.jumpstart.localhost"       # parametrize
+Add-HostsEntry "default.jumpstart.localhost"   # parametrize
+Add-HostsEntry "secondary.jumpstart.localhost" # parametrize
 
 ###############################
 # Generate scjssconfig
 ###############################
 
-Set-EnvFileVariable "JSS_DEPLOYMENT_SECRET_xmcloudpreview" -Value $xmCloudBuild.renderingHosts.xmcloudpreview.jssDeploymentSecret
+Set-EnvFileVariable "JSS_DEPLOYMENT_SECRET" -Value $xmCloudBuild.renderingHosts.jumpstart.jssDeploymentSecret
 
 ################################
 # Generate Sitecore Api Key
 ################################
 
 $sitecoreApiKey = (New-Guid).Guid
-Set-EnvFileVariable "SITECORE_API_KEY_xmcloudpreview" -Value $sitecoreApiKey
+Set-EnvFileVariable "SITECORE_API_KEY" -Value $sitecoreApiKey
 
 ################################
 # Generate JSS_EDITING_SECRET

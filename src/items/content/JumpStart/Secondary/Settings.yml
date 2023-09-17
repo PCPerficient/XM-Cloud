@@ -11,6 +11,9 @@ SharedFields:
 - ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
   Hint: __Masters
   Value: "{C2DC4690-AF44-48C7-BB21-90D1AD246732}"
+- ID: "1864e99d-c29a-40bf-96e0-b3e7896a013b"
+  Hint: UseLanguageSpecificLayout
+  Value: 
 - ID: "300fb7a0-b27f-44dd-9af0-b37a19723e0e"
   Hint: RouteTemplateName
   Value: Settings Route
@@ -19,7 +22,7 @@ SharedFields:
   Value: "{4B035201-973C-49F4-B7BD-44BED3382415}"
 - ID: "3e4f559f-8e59-4405-b50d-619811371f6c"
   Hint: Name
-  Value: Secondary
+  Value: secondary
 - ID: "5764d2d4-724d-4313-a81b-9246c911faff"
   Hint: AppDatasourcesPath
   Value: "{1791C0FC-B1DC-4A9B-AD2F-A09F8E7D028C}"
@@ -71,11 +74,11 @@ Languages:
         sitecore\martin.miles@perficient.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "bb854555-c616-4cb5-9060-2fa59a2c913a"
+      Value: "2b87e5b1-040e-4921-bfc9-c0fcf360846d"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\martin.miles@perficient.com
+        sitecore\sitecore.professional@gmail.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20230915T150106Z
+      Value: 20230916T040332Z

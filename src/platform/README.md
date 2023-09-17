@@ -1,4 +1,4 @@
-# Sitecore Platform Project
+# JumpStart Platform Project
 
 This Visual Studio / MSBuild project is used to deploy code and configuration
 to the main Sitecore platform roles, known as Content Management and

@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+
+<configuration xmlns:patch="http://www.sitecore.net/xmlconfig/"
+               xmlns:set="http://www.sitecore.net/xmlconfig/set/">
+  <sitecore>
+    <javaScriptServices>
+      <apps>
+        <!--
+          JSS App Registration
+          The JSS app needs to be registered in order to support layout service and import services.
+
+          There are many available attributes, and they inherit the defaults if not explicitly specified here.
+          Defaults are defined in `/App_Config/Sitecore/JavaScriptServices/Sitecore.JavaScriptServices.Apps.config`
+
+          NOTE: graphQLEndpoint enables _Integrated GraphQL_. If not using integrated GraphQL, it can be removed.
+
+          NOTE: This app configuration assumes a Sitecore-first approach and thus disables the JSS Workflow for
+          initial app import, and does not protect imported items.
+        -->
+        <app name="JumpStart"
+             sitecorePath="/sitecore/content/JumpStart/JumpStart"
+             graphQLEndpoint="/sitecore/api/graph/edge"
+             serverSideRenderingEngine="http"
+             serverSideRenderingEngineEndpointUrl="$(env:RENDERING_HOST_INTERNAL_URI_DemoSite)/api/editing/render"
+             serverSideRenderingEngineApplicationUrl="http://$(env:SITECORE_EDITING_HOST_PUBLIC_HOST_DemoSite)"
+             useLanguageSpecificLayout="true"
+             defaultWorkflow=""
+             protectDeveloperItems="false"
+             deploymentSecret="$(env:JSS_DEPLOYMENT_SECRET_DemoSite)"
+             debugSecurity="false"
+             inherits="defaults" />
+      </apps>    
+    </javaScriptServices>
+  </sitecore>
+</configuration>

@@ -1,11 +1,11 @@
-# XM Cloud Starter Kit (Next JS)
+# Perficient XM Cloud JumpStart
 
 ## QUICK START
 
 1. In an ADMIN terminal:
 
     ```ps1
-    .\init.ps1 -InitEnv -LicenseXmlPath "C:\path\to\license.xml" -AdminPassword "DesiredAdminPassword"
+    .\init.ps1 -InitEnv -LicenseXmlPath "C:\projects\license.xml" -AdminPassword "b"
     ```
 
 2. Restart your terminal and run:
@@ -22,6 +22,6 @@
 
 ## About this Solution
 This solution is designed to help developers learn and get started quickly
-with XMCLoud + SXA.
+with XM CLoud + Headless SXA.
 
 

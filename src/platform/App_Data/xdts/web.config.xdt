@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
+  <system.web>
+    <customErrors mode="Off" xdt:Transform="SetAttributes"/>
+  </system.web>
+  <appSettings>
+    <add key="Some_New_Key" value="value_to_insert" xdt:Transform="InsertIfMissing" xdt:Locator="Match(key)" />
+  </appSettings>  
+</configuration>
+

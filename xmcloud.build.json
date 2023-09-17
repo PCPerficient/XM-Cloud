@@ -1,7 +1,18 @@
 {
     "renderingHosts": {
       "jumpstart": {
-        "path": "./src/sxastarter",
+        "path": "./src/jumpstart",
+        "nodeVersion": "16.15.1",
+        "jssDeploymentSecret": "110F1C44A496B45478640DD36F80C18C9",
+        "enabled": true,
+        "type": "sxa",
+        "lintCommand": "lint",
+        "startCommand": "start:production",
+        "buildCommand": "build",
+        "runCommand": "next:start"
+      },
+      "secondary": {
+        "path": "./src/secondary",
         "nodeVersion": "16.15.1",
         "jssDeploymentSecret": "110F1C44A496B45478640DD36F80C18C9",
         "enabled": true,
@@ -12,6 +23,15 @@
         "runCommand": "next:start"
       }
     },
+    "buildTargets": [
+      "./src/platform/JumpStart.csproj"
+    ],
+    "transforms": [
+      {
+        "xdtPath": "/app_data/xdts/web.config.xdt",
+        "targetPath": "/web.config"
+      }
+    ],
     "postActions": {
         "actions":{
           "warmUpCm": {

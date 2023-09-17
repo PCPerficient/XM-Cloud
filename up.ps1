@@ -1,3 +1,18 @@
+[CmdletBinding(DefaultParameterSetName = "no-arguments")]
+Param (
+    [Parameter(HelpMessage = "Toggles whether to skip building the images.")]
+    [switch]$SkipBuild,
+
+    [Parameter(HelpMessage = "Toggles whether to skip schemas and rebuild of the indexes.")]
+    [switch]$SkipIndexing,
+
+    [Parameter(HelpMessage = "Toggles whether to skip pushing items and JSS configuration.")]
+    [switch]$SkipPush,
+
+    [Parameter(HelpMessage = "Toggles whether to skip opening the site and CM in a browser.")]
+    [switch]$SkipOpen
+)
+
 $ErrorActionPreference = "Stop";
 
 $envContent = Get-Content .env -Encoding UTF8
@@ -5,9 +20,15 @@ $xmCloudHost = $envContent | Where-Object { $_ -imatch "^CM_HOST=.+" }
 $sitecoreDockerRegistry = $envContent | Where-Object { $_ -imatch "^SITECORE_DOCKER_REGISTRY=.+" }
 $sitecoreVersion = $envContent | Where-Object { $_ -imatch "^SITECORE_VERSION=.+" }
 $ClientCredentialsLogin = $envContent | Where-Object { $_ -imatch "^SITECORE_FedAuth_dot_Auth0_dot_ClientCredentialsLogin=.+" }
-$sitecoreApiKey = ($envContent | Where-Object { $_ -imatch "^SITECORE_API_KEY_xmcloudpreview=.+" }).Split("=")[1]
+$sitecoreApiKey = ($envContent | Where-Object { $_ -imatch "^SITECORE_API_KEY=.+" }).Split("=")[1]
+
+$renderingHost = $envContent | Where-Object { $_ -imatch "^RENDERING_HOST=.+" }
+$secondaryHost = $envContent | Where-Object { $_ -imatch "^SECONDARY_HOST=.+" }
 
 $xmCloudHost = $xmCloudHost.Split("=")[1]
+$renderingHost = $renderingHost.Split("=")[1]
+$secondaryHost = $secondaryHost.Split("=")[1]
+
 $sitecoreDockerRegistry = $sitecoreDockerRegistry.Split("=")[1]
 $sitecoreVersion = $sitecoreVersion.Split("=")[1]
 $ClientCredentialsLogin = $ClientCredentialsLogin.Split("=")[1]
@@ -24,9 +45,9 @@ if ($ClientCredentialsLogin -eq "true") {
 
 #set nuget version
 $xmCloudBuild = Get-Content "xmcloud.build.json" | ConvertFrom-Json
-$nodeVersion = $xmCloudBuild.renderingHosts.xmcloudpreview.nodeVersion
+$nodeVersion = $xmCloudBuild.renderingHosts.jumpstart.nodeVersion
 if (![string]::IsNullOrWhitespace($nodeVersion)) {
-    Set-EnvFileVariable "NODEJS_VERSION" -Value $xmCloudBuild.renderingHosts.xmcloudpreview.nodeVersion
+    Set-EnvFileVariable "NODEJS_VERSION" -Value $xmCloudBuild.renderingHosts.jumpstart.nodeVersion
 }
 
 # Double check whether init has been run
@@ -36,14 +57,16 @@ if (-not $envCheck) {
     throw "$envCheckVariable does not have a value. Did you run 'init.ps1 -InitEnv'?"
 }
 
-Write-Host "Keeping XM Cloud base image up to date" -ForegroundColor Green
-docker pull "$($sitecoreDockerRegistry)sitecore-xmcloud-cm:$($sitecoreVersion)"
+if (-Not $SkipBuild) {
+    Write-Host "Keeping XM Cloud base image up to date" -ForegroundColor Green
+    docker pull "$($sitecoreDockerRegistry)sitecore-xmcloud-cm:$($sitecoreVersion)"
 
-# Build all containers in the Sitecore instance, forcing a pull of latest base containers
-Write-Host "Building containers..." -ForegroundColor Green
-docker compose build
-if ($LASTEXITCODE -ne 0) {
-    Write-Error "Container build failed, see errors above."
+    # Build all containers in the Sitecore instance, forcing a pull of latest base containers
+    Write-Host "Building containers..." -ForegroundColor Green
+    docker compose build
+    if ($LASTEXITCODE -ne 0) {
+        Write-Error "Container build failed, see errors above."
+    }
 }
 
 # Start the Sitecore instance
@@ -92,27 +115,34 @@ if ($LASTEXITCODE -ne 0) {
     Write-Error "Unable to log into Sitecore, did the Sitecore environment start correctly? See logs above."
 }
 
-# Populate Solr managed schemas to avoid errors during item deploy
-Write-Host "Populating Solr managed schema..." -ForegroundColor Green
-dotnet sitecore index schema-populate
-if ($LASTEXITCODE -ne 0) {
-    Write-Error "Populating Solr managed schema failed, see errors above."
+if (-not $SkipIndexing) {
+    # Populate Solr managed schemas to avoid errors during item deploy
+    Write-Host "Populating Solr managed schema..." -ForegroundColor Green
+    dotnet sitecore index schema-populate
+    if ($LASTEXITCODE -ne 0) {
+        Write-Error "Populating Solr managed schema failed, see errors above."
+    }
+
+    # Rebuild indexes
+    Write-Host "Rebuilding indexes ..." -ForegroundColor Green
+    dotnet sitecore index rebuild
 }
 
-# Rebuild indexes
-Write-Host "Rebuilding indexes ..." -ForegroundColor Green
-dotnet sitecore index rebuild
 
-Write-Host "Pushing Default rendering host configuration" -ForegroundColor Green
-dotnet sitecore ser push -i RenderingHost
+if (-not $SkipPush) {
+    # Deploy the serialised content items
+    Write-Host "Pushing items to Sitecore..." -ForegroundColor Green
+    dotnet sitecore ser push
+    if ($LASTEXITCODE -ne 0) {
+        Write-Error "Serialization push failed, see errors above."
+    }
+}
 
-Write-Host "Pushing sitecore API key" -ForegroundColor Green
-& docker\build\cm\templates\import-templates.ps1 -RenderingSiteName "xmcloudpreview" -SitecoreApiKey $sitecoreApiKey
-
-if ($ClientCredentialsLogin -ne "true") {
+if (-not $SkipOpen) {
     Write-Host "Opening site..." -ForegroundColor Green
-    
-    Start-Process https://xmcloudcm.localhost/sitecore/
+    Start-Process https://$xmCloudHost/sitecore/
+    Start-Process https://$renderingHost
+    Start-Process https://$secondaryHost
 }
 
 Write-Host ""

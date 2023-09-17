@@ -1,0 +1,5 @@
+{
+    "connectionUri": "https://xmcloudcm.localhost/",
+    "username": "sitecore\\speremoting",
+    "SPE_REMOTING_SECRET": "C0DE64E2493B8BE2B78FF12CB80374F6F85957755A6F83134D55D35F32ABD0EA"
+}

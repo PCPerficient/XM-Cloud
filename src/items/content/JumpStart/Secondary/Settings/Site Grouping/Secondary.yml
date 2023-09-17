@@ -13,16 +13,16 @@ SharedFields:
   Value: /sitecore/media library/Project/JumpStart/Secondary
 - ID: "8e0dd914-9afb-4d45-bf8b-7ff5d6e5337e"
   Hint: HostName
-  Value: *
+  Value: secondary.jumpstart.localhost
 - ID: "cb4e9e2e-2b66-43dc-ad3f-9caf363d28d3"
   Hint: SiteName
-  Value: Secondary
+  Value: secondary
 - ID: "da06d09e-02b6-464a-80fc-9d8d7fc875e3"
   Hint: Environment
   Value: *
 - ID: "f57099a3-526a-49f2-aebd-635453e48875"
   Hint: RenderingHost
-  Value: JumpStart
+  Value: Secondary
 - ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
   Hint: __Originator
   Value: "{23E42340-77BE-49FC-A7C4-77D3CB545223}"
@@ -44,11 +44,11 @@ Languages:
         sitecore\martin.miles@perficient.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "1bd4ffa7-f8fe-4928-b049-a30b1097f0c5"
+      Value: "ca4e0e88-77bf-40dd-b6f0-e8e9013123cd"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\martin.miles@perficient.com
+        sitecore\sitecore.professional@gmail.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20230915T162317Z
+      Value: 20230916T194330Z
