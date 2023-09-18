@@ -68,6 +68,7 @@
     <Content Include="App_Config\Include\Sitecore.Dev.AppJSS.config.DEMO" />
     <Content Include="App_Config\Include\zzz\ZZZ.config" />
     <Content Include="sitecore\shell\Applications\Content Manager\Content Editor.js" />
+    <Content Include="App_Data\xdts\web.config.xdt" />
     <None Include="JumpStart.wpp.targets" />
     <None Include="Properties\PublishProfiles\Local.pubxml" />
     <None Include="README.md" />
