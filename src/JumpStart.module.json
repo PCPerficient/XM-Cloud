@@ -69,14 +69,8 @@
           "allowedPushOperations": "CreateOnly"
         },
         {
-            "name": "DefaultRenderingHost",
+            "name": "RenderingHost",
             "path": "/sitecore/system/Settings/Services/Rendering Hosts/JumpStart",
-            "scope": "singleItem"
-        }
-        ,
-        {
-            "name": "SecondaryRenderingHost",
-            "path": "/sitecore/system/Settings/Services/Rendering Hosts/Secondary",
             "scope": "singleItem"
         }
       ]

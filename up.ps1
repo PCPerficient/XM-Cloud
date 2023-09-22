@@ -23,7 +23,7 @@ $ClientCredentialsLogin = $envContent | Where-Object { $_ -imatch "^SITECORE_Fed
 $sitecoreApiKey = ($envContent | Where-Object { $_ -imatch "^SITECORE_API_KEY=.+" }).Split("=")[1]
 
 $renderingHost = $envContent | Where-Object { $_ -imatch "^RENDERING_HOST=.+" }
-$secondaryHost = $envContent | Where-Object { $_ -imatch "^SECONDARY_HOST=.+" }
+$secondaryHost = $envContent | Where-Object { $_ -imatch "^JUMPSTART_HOST=.+" }
 
 $xmCloudHost = $xmCloudHost.Split("=")[1]
 $renderingHost = $renderingHost.Split("=")[1]

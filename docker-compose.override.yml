@@ -19,7 +19,7 @@ services:
       args:
         PARENT_IMAGE: ${REGISTRY}${COMPOSE_PROJECT_NAME}-nodejs:${VERSION:-latest}
     volumes:
-      - .\src\jumpstart:C:\app
+      - .\src\sxastarter:C:\app
     environment:
       SITECORE_API_HOST: "http://cm"
       NEXTJS_DIST_DIR: ".next-container"
@@ -36,7 +36,7 @@ services:
       - "traefik.http.routers.rendering-secure.rule=Host(`${RENDERING_HOST}`)"
       - "traefik.http.routers.rendering-secure.tls=true"
 
-  secondary:
+  jumpstart:
     image: ${REGISTRY}${COMPOSE_PROJECT_NAME}-rendering:${VERSION:-latest}
     build:
       context: ./docker/build/rendering
@@ -44,11 +44,11 @@ services:
       args:
         PARENT_IMAGE: ${REGISTRY}${COMPOSE_PROJECT_NAME}-nodejs:${VERSION:-latest}
     volumes:
-      - .\src\secondary:C:\app
+      - .\src\jumpstart:C:\app
     environment:
       SITECORE_API_HOST: "http://cm"
       NEXTJS_DIST_DIR: ".next-container"
-      PUBLIC_URL: "https://${SECONDARY_HOST}"
+      PUBLIC_URL: "https://${JUMPSTART_HOST}"
       JSS_EDITING_SECRET: ${JSS_EDITING_SECRET}
       SITECORE_API_KEY: "${SITECORE_API_KEY}"
       DISABLE_SSG_FETCH: ${DISABLE_SSG_FETCH}
@@ -57,9 +57,9 @@ services:
       - nodejs
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.secondary-secure.entrypoints=websecure"
-      - "traefik.http.routers.secondary-secure.rule=Host(`${SECONDARY_HOST}`)"
-      - "traefik.http.routers.secondary-secure.tls=true"
+      - "traefik.http.routers.jumpstart-secure.entrypoints=websecure"
+      - "traefik.http.routers.jumpstart-secure.rule=Host(`${JUMPSTART_HOST}`)"
+      - "traefik.http.routers.jumpstart-secure.tls=true"
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:3000/api/healthz"]
       interval: 60s

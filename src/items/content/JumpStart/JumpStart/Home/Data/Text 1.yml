@@ -24,14 +24,14 @@ Languages:
         sitecore\martin.miles@perficient.com
     - ID: "729034fc-24f3-40b7-8fa4-fb49d7de20dd"
       Hint: Text
-      Value: <p>Default Site Content</p>
+      Value: <p>JumpStart Site Content</p>
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "3d999868-cb86-48f7-bfeb-fda7e7e6dfdd"
+      Value: "d3b713ff-0f88-4312-8698-d93a075fd1b2"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\martin.miles@perficient.com
+        sitecore\sitecore.professional@gmail.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20230915T164841Z
+      Value: 20230917T045655Z

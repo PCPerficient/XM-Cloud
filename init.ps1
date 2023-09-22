@@ -83,6 +83,7 @@ try {
     & $mkcert -install
     & $mkcert "xmcloudcm.localhost"
     & $mkcert "*.jumpstart.localhost"
+    & $mkcert "*.xmcloudpreview.localhost"
 
     # stash CAROOT path for messaging at the end of the script
     $caRoot = "$(& $mkcert -CAROOT)\rootCA.pem"
@@ -103,8 +104,7 @@ Write-Host "Adding Windows hosts file entries..." -ForegroundColor Green
 
 Add-HostsEntry "xmcloudcm.localhost"           # parametrize
 Add-HostsEntry "www.jumpstart.localhost"       # parametrize
-Add-HostsEntry "default.jumpstart.localhost"   # parametrize
-Add-HostsEntry "secondary.jumpstart.localhost" # parametrize
+Add-HostsEntry "www.xmcloudpreview.localhost"   # parametrize
 
 ###############################
 # Generate scjssconfig

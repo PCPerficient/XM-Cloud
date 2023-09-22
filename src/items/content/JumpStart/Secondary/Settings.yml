@@ -22,16 +22,16 @@ SharedFields:
   Value: "{4B035201-973C-49F4-B7BD-44BED3382415}"
 - ID: "3e4f559f-8e59-4405-b50d-619811371f6c"
   Hint: Name
-  Value: secondary
+  Value: sxastarter
 - ID: "5764d2d4-724d-4313-a81b-9246c911faff"
   Hint: AppDatasourcesPath
   Value: "{1791C0FC-B1DC-4A9B-AD2F-A09F8E7D028C}"
 - ID: "5ca117eb-8782-4a4f-9f2f-30de31fc2e34"
   Hint: PlaceholdersPath
-  Value: "{8CA6D1AA-7928-42E0-B92D-9F5D590493A0}"
+  Value: "{F5F0FBE3-61AD-4967-A5D8-8D760331D6A1}"
 - ID: "72e83c8d-3578-4e50-b4c0-93a78a1729f2"
   Hint: FilesystemPath
-  Value: /dist/Secondary
+  Value: /dist/Default
 - ID: "9016141c-ff51-40f2-9135-40f5161b9784"
   Hint: ServerSideRenderingEngine
   Value: http
@@ -52,7 +52,7 @@ SharedFields:
   Value: "{3DDC0068-FC2E-4906-BA7C-5777A6C55ED2}"
 - ID: "f29428d5-1285-48b8-a884-44057965829a"
   Hint: RenderingsPath
-  Value: "{3DE75B64-EAC3-4EE4-B6AF-DD3E06CDD4DC}"
+  Value: "{1995806F-0A84-42B5-93B0-88F0E2FF872C}"
 - ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
   Hint: __Originator
   Value: "{0FEEB907-58F0-44DE-B08C-2F43C063D0A5}"
@@ -74,11 +74,11 @@ Languages:
         sitecore\martin.miles@perficient.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "2b87e5b1-040e-4921-bfc9-c0fcf360846d"
+      Value: "5d3be103-453d-4827-bf68-0eeacdf370f7"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\sitecore.professional@gmail.com
+        sitecore\martin.miles@perficient.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20230916T040332Z
+      Value: 20230922T021252Z

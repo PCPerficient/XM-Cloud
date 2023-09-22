@@ -1,8 +1,8 @@
-﻿---
+---
 ID: "dffee92b-0441-45a4-9207-67810b72bd46"
 Parent: "895e25c4-12b2-4b2c-8233-82f3b79eef53"
 Template: "bc71d442-3e4f-46ba-887c-746e54f9bb83"
-Path: /sitecore/system/Settings/Services/Rendering Hosts/JumpStart
+Path: /sitecore/system/Settings/Services/Rendering Hosts/Default
 SharedFields:
 - ID: "e32c1801-79b3-4fc1-a9c4-3c6e6c2968ae"
   Hint: ServerSideRenderingEngineApplicationUrl
@@ -24,11 +24,11 @@ Languages:
         sitecore\Admin
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "73795a24-b5cb-4abb-908b-6de65fd4323a"
+      Value: "c9cd6f4c-0f8a-45af-8792-044e422401b0"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\martin.miles@perficient.com
+        sitecore\xmc-e2e-admin@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20230915T162317Z
+      Value: 20220628T155530Z

@@ -1,7 +1,7 @@
 {
   "name": "jumpstart",
   "description": "Application utilizing Sitecore JavaScript Services and Next.js",
-  "version": "21.2.4",
+  "version": "21.3.1",
   "private": true,
   "config": {
     "appName": "jumpstart",

@@ -31,7 +31,7 @@ SharedFields:
   Value: "{8CA6D1AA-7928-42E0-B92D-9F5D590493A0}"
 - ID: "72e83c8d-3578-4e50-b4c0-93a78a1729f2"
   Hint: FilesystemPath
-  Value: /dist/Default
+  Value: /dist/Secondary
 - ID: "9016141c-ff51-40f2-9135-40f5161b9784"
   Hint: ServerSideRenderingEngine
   Value: http
@@ -74,11 +74,11 @@ Languages:
         sitecore\martin.miles@perficient.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "32071d58-cc40-4d93-90f8-97f4fb8d1ec5"
+      Value: "fd04b0e2-9d98-489d-add9-8d581639de52"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\martin.miles@perficient.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20230915T160429Z
+      Value: 20230922T010128Z

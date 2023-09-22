@@ -22,7 +22,7 @@ SharedFields:
   Value: *
 - ID: "f57099a3-526a-49f2-aebd-635453e48875"
   Hint: RenderingHost
-  Value: JumpStart
+  Value: Default
 - ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
   Hint: __Originator
   Value: "{23E42340-77BE-49FC-A7C4-77D3CB545223}"
@@ -44,11 +44,11 @@ Languages:
         sitecore\martin.miles@perficient.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "464e072a-e6c2-4c95-af5a-c3b50f002094"
+      Value: "9fc46687-93fe-4de9-a971-3ddc921affe3"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\sitecore.professional@gmail.com
+        sitecore\martin.miles@perficient.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20230916T170616Z
+      Value: 20230922T005824Z

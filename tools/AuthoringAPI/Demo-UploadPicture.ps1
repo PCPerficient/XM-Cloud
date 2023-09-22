@@ -2,8 +2,8 @@
 
 $FileToUpload = "C:\Projects\XM-Cloud\tools\AuthoringAPI\xm-cloud-logo.svg"
 $MediaDestination = "Default Website/XM Cloud Logo"
-$Hostname = "xmcloudcm.localhost"
-# $Hostname = "xmc-perficient-introduction-158.sitecorecloud.io"
+# $Hostname = "xmcloudcm.localhost"
+$Hostname = "xmc-perficient-pocs-jumpstart.sitecorecloud.io"
 
 # First, obtain JWT using authorized data from user.json
 $JWT = ..\Security\Request-JWT.ps1
