@@ -116,8 +116,9 @@ Set-EnvFileVariable "JSS_DEPLOYMENT_SECRET" -Value $xmCloudBuild.renderingHosts.
 # Generate Sitecore Api Key
 ################################
 
-$sitecoreApiKey = (New-Guid).Guid
-Set-EnvFileVariable "SITECORE_API_KEY" -Value $sitecoreApiKey
+# commented as Default API key is serialized
+# $sitecoreApiKey = (New-Guid).Guid
+# Set-EnvFileVariable "SITECORE_API_KEY" -Value $sitecoreApiKey
 
 ################################
 # Generate JSS_EDITING_SECRET
